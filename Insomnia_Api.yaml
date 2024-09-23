@@ -1,0 +1,262 @@
+_type: export
+__export_format: 4
+__export_date: 2024-09-22T05:52:47.907Z
+__export_source: insomnia.desktop.app:v10.0.0
+resources:
+  - _id: req_0a10f03587be4ff4b3acdf19200fe589
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982780674
+    created: 1726982575170
+    url: http://localhost:8081/api/v1/filesystem/carpetas
+    name: listarCarpetas
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1719671175059.9375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0f585c727d5c4fcb9c543db1205bd24f
+    parentId: wrk_272b9b2139de477699efd8c37f244363
+    modified: 1726980867542
+    created: 1726980853668
+    name: FileSystem
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1723929843135
+    _type: request_group
+  - _id: wrk_272b9b2139de477699efd8c37f244363
+    parentId: null
+    modified: 1726980853650
+    created: 1726980853650
+    name: UPS-COMPOSITE
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_2500270d210540fe9fc937326285c984
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982795486
+    created: 1726982587366
+    url: http://localhost:8081/api/v1/filesystem/archivos
+    name: listarArchivos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1719464997529.4688
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_97da0ebe969241d8a977269d8a2ba841
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982817625
+    created: 1726980853684
+    url: http://localhost:8081/api/v1/filesystem/carpeta/3
+    name: listarContenidoCarpeta
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1719133210929.4844
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d882cd99b751454b989b65056ffb2afe
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982060398
+    created: 1726980853675
+    url: http://localhost:8081/api/v1/filesystem/archivo
+    name: crearArchivo
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nombre": "ejemplo.txt",
+          "tamanio": 1024,
+          "tipo": "txt"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1718801424329.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fecc74d4d5824d5fb05b54b83f83d1fc
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982494464
+    created: 1726980853682
+    url: http://localhost:8081/api/v1/filesystem/carpeta
+    name: crearCarpeta
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |+
+        {
+        	"nombre": "Nueva Carpeta2"
+        }
+
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1717519318538.125
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a673f2f171394cdcbdac743dd0cfef50
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982473923
+    created: 1726980853679
+    url: http://localhost:8081/api/v1/filesystem/{id}
+    name: eliminarElemento
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1716237212746.75
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_659690d079d8415c87c5cbce84540cac
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982932566
+    created: 1726980853685
+    url: http://localhost:8081/api/v1/filesystem/tamanio/1
+    name: obtenerTamanio
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1714955106905.375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_289f77d3bf074f8483378b6e0c5300dd
+    parentId: fld_0f585c727d5c4fcb9c543db1205bd24f
+    modified: 1726982901182
+    created: 1726980853690
+    url: http://localhost:8081/api/v1/filesystem/mover/1?carpetaDestinoId=3
+    name: moverElemento
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1714314054034.6875
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0a0d997fc5044243953eb8bdc1e4d851
+    parentId: wrk_272b9b2139de477699efd8c37f244363
+    modified: 1726980853657
+    created: 1726980853657
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1723929221177
+    _type: environment
+  - _id: jar_7b6d6b87c25e46589a5d15fa2a1c477f
+    parentId: wrk_272b9b2139de477699efd8c37f244363
+    modified: 1726980853664
+    created: 1726980853664
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_76d62d572beb4ea5b3abaf2f18023629
+    parentId: wrk_272b9b2139de477699efd8c37f244363
+    modified: 1726980853719
+    created: 1726980853694
+    fileName: UPS-COMPOSITE
+    contents: ""
+    contentType: yaml
+    _type: api_spec
