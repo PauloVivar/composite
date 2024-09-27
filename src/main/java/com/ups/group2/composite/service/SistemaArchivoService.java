@@ -54,16 +54,6 @@ public class SistemaArchivoService {
       return carpetaRepository.save(carpeta);
   }
 
-  // public void eliminarElemento(Long id) {
-  //     if (archivoRepository.existsById(id)) {
-  //         archivoRepository.deleteById(id);
-  //     } else if (carpetaRepository.existsById(id)) {
-  //         carpetaRepository.deleteById(id);
-  //     } else {
-  //         throw new EntityNotFoundException("Elemento no encontrado");
-  //     }
-  // }
-
   @Transactional
   public void eliminarElemento(Long id) {
     ElementoSistemaArchivo elemento = encontrarElemento(id);
@@ -97,29 +87,6 @@ public class SistemaArchivoService {
 
     throw new EntityNotFoundException("Elemento no encontrado");
   }
-
-  // public void moverElemento(Long elementoId, Long carpetaDestinoId) {
-  //   Carpeta carpetaDestino = carpetaRepository.findById(carpetaDestinoId)
-  //           .orElseThrow(() -> new EntityNotFoundException("Carpeta destino no encontrada"));
-
-  //   ElementoSistemaArchivo elemento = null;
-  //   Optional<Archivo> archivo = archivoRepository.findById(elementoId);
-  //   if (archivo.isPresent()) {
-  //       elemento = archivo.get();
-  //   } else {
-  //       Optional<Carpeta> carpeta = carpetaRepository.findById(elementoId);
-  //       if (carpeta.isPresent()) {
-  //           elemento = carpeta.get();
-  //       }
-  //   }
-
-  //   if (elemento == null) {
-  //       throw new EntityNotFoundException("Elemento no encontrado");
-  //   }
-
-  //   carpetaDestino.agregarElemento(elemento);
-  //   carpetaRepository.save(carpetaDestino);
-  // }
 
   @Transactional
   public void moverElemento(Long elementoId, Long carpetaDestinoId) {
